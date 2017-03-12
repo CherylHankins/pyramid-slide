@@ -2,44 +2,68 @@
 <html>
 <head>
     <style>
+        html {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 4%;
+        }
+
         #pyramid {
             line-height: 0;
             font-size: 30px;
+        }
+
+        #head {
+            height: 100px;
+            background-color: #944D71;
+            color: #d6d2d2;
+            padding: 3px;
+        }
+
+        #outer {
+            border: 3px solid #944D71;
+            background-color: #ebe6e6;
+            margin: 15px;
+        }
+
+        #inner {
+            background-color: #d6d2d2;
         }
 
         body {
             font-family: "Courier New", monospace;
             text-align: center;
         }
+
     </style>
 </head>
 <body >
-    <h1>Pyramid Slide</h1>
-
-    <br>
-    <label>Brick Symbol: </label>
-      <select name = Brick Symbol id = "symbol">
-          <option value = "#">#</option>
-          <option value = "@">@</option>
-          <option value = "X">X</option>
-          <option value = "$">$</option>
-      </select>
-
-
-    <br>
-
-    <label>How high?</label>
-    <input type="range"
-           id="height"
-           min = "1"
-           max = "20"/>
-    <br><br>
-    <button onclick = "determineHeightAndThenDrawPyramid()">Draw a pyramid</button>
-
-    <br><br>
-
-    <div id="pyramid"></div>
-
-    <script src="pyramid-slide.js"></script>
+    <div id = head>
+      <h1>Pyramid Slide</h1>
+    </div>
+      <br>
+    <div id = outer>
+        <div id = inner>
+            <label>Brick Symbol: </label>
+            <select name = Brick Symbol id = "symbol">
+                <option value = "#">#</option>
+                <option value = "@">@</option>
+                <option value = "X">X</option>
+                <option value = "$">$</option>
+            </select>
+            <br>
+            <br>
+                <label>How high?</label>
+                <input type="range"
+                    id="height"
+                    min = "1"
+                    max = "20"/>
+                    <br><br>
+                    <button onclick = "determineHeightAndThenDrawPyramid()">Draw a pyramid</button>
+            <br><br>
+        </div>
+            <div id="pyramid"></div>
+            <script src="pyramid-slide.js"></script>
+    </div>
 </body>
 </html>
