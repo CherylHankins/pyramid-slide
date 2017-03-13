@@ -3,7 +3,7 @@
 <head>
     <style>
         html {
-            border: 1px solid black;
+            border: 2px solid #d6d2d2;
             margin: 10px;
             padding: 4%;
         }
@@ -24,7 +24,7 @@
 
         #outer {
             border: 3px solid #944D71;
-            border-radius: 3px;
+            border-radius: 5px;
             background-color: #ebe6e6;
             margin: 15px;
         }
@@ -32,6 +32,7 @@
         #inner {
             background-color: #d6d2d2;
             height: 100px;
+            font-weight: bold;
         }
 
         body {
@@ -65,7 +66,7 @@
                     max = "20"
                     step = "1"
                     oninput =  "determineHeightAndThenDrawPyramid()"/>
-                <output for = "range" >WHAT HERE???</output>
+                <output for = "range" id = "volume">Height</output>
             </span>
 
             <br><br>

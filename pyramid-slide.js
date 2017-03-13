@@ -30,8 +30,9 @@ function determineHeightAndThenDrawPyramid() {
 
      // before drawing, clear the old content
      document.getElementById("pyramid").innerHTML = "";
+     document.getElementById("volume").innerHTML = height;
 
-     //retrieve brick symbol (#, @, X, $)
+     //retrieve brick symbol selected (#, @, X, $)
      var select = document.getElementById("symbol");
      var symbol = select.options[select.selectedIndex].value;
      console.log(symbol);
@@ -62,6 +63,3 @@ function determineHeightAndThenDrawPyramid() {
         document.getElementById("pyramid").appendChild(rowElem);
     }
 }
-
-
-//Issue 1- How to get the range number to display
