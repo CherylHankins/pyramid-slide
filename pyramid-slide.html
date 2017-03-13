@@ -11,6 +11,8 @@
         #pyramid {
             line-height: 0;
             font-size: 30px;
+            font-weight: bold;
+            color: #944D71;
         }
 
         #head {
@@ -22,12 +24,14 @@
 
         #outer {
             border: 3px solid #944D71;
+            border-radius: 3px;
             background-color: #ebe6e6;
             margin: 15px;
         }
 
         #inner {
             background-color: #d6d2d2;
+            height: 100px;
         }
 
         body {
@@ -44,22 +48,26 @@
       <br>
     <div id = outer>
         <div id = inner>
-            <label>Brick Symbol: </label>
-            <select name = Brick Symbol id = "symbol">
-                <option value = "#">#</option>
-                <option value = "@">@</option>
-                <option value = "X">X</option>
-                <option value = "$">$</option>
+            <br>
+            <span>
+            <label for = "symbol">Brick Symbol: </label>
+            <select name = Brick Symbol id = "symbol" onchange = "determineHeightAndThenDrawPyramid()">
+                <option>#</option>
+                <option>@</option>
+                <option>X</option>
+                <option>$</option>
             </select>
-            <br>
-            <br>
-                <label>How high?</label>
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                <label for = "height">How high?</label>
                 <input type="range"
                     id="height"
                     min = "1"
-                    max = "20"/>
-                    <br><br>
-                    <button onclick = "determineHeightAndThenDrawPyramid()">Draw a pyramid</button>
+                    max = "20"
+                    step = "1"
+                    oninput =  "determineHeightAndThenDrawPyramid()"/>
+                <output for = "range" >WHAT HERE???</output>
+            </span>
+
             <br><br>
         </div>
             <div id="pyramid"></div>
